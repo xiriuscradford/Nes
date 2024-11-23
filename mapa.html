@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+    <meta charset="UTF-8">
+    <title>Mapa de la República Dominicana</title>
+    <script src="ma.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mapa.css">
+    <script src="javascript/mapa.js"></script>
+    <title>Mapa</title>
+</head>
+
+<body>
+   
+    
+
+
+    
+    
+    <header class="hero">
+        <button id="abrir" class="abrir-menu"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg></button>
+        <nav class="header" id="nav">
+            <button class="cerrar-menu" id="cerrar"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="36"
+                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg></button>
+            <ul class="nav-list">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="denuncias"><a href="Denuncias-html.html">Denuncias</a></li>
+                <li class="qn"><a href="qn.html">Quienes somos</a></li>
+                <li class=" qn"><a href="Mapa.html">Mapa</a></li>
+                <li class="dispositivo"><a href="Dispositivo.html">Dispositivo</a></li>
+                <li class="contactos"><a href="Contactos.html">Contactos</a></li>
+                <li class="campana"><button class="iconocampana"  onclick="openModal()" ><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="icon" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                  </svg></button></li>
+                
+
+            </ul>
+        </nav>
+        
+
+
+
+
+
+
+        
+
+
+        <div id="map" st></div>
+        <div id="map2"></div>
+   
+    
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer
+      ></script>
+    
+        
+
+    <div class="mapatitulo">
+          
+        <div class="todoslostextos">
+         
+
+            
+            </div>
+
+            <div id="modal-container">
+                <div id="modal-content">
+               
+                    <p class="textocontenet">
+                        
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" padd height="16" fill="currentColor" class="circle-fill" viewBox="0 0 16 16" color = "red">
+                        <circle cx="8" cy="8" r="8"/>
+                      </svg>  Nagua tiene una nueva zona roja sea formo <br><br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="circle-fill" viewBox="0 0 16 16" color = "red">
+                        <circle cx="8" cy="8" r="8"/>
+                      </svg> Ya fue respondido tu mensage (revisa tu chat privado) <br><br>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="circle-fill" viewBox="0 0 16 16" color = "red">
+                        <circle cx="8" cy="8" r="8"/>
+                      </svg>Comfirma tu correo electronico  <br><br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="circle-fill" viewBox="0 0 16 16" color = "red">
+                        <circle cx="8" cy="8" r="8"/>
+                      </svg> Se registro tu usuario (no olvides tu contraseña) <br> 
+                    </p>
+                    <span class="close-btn" onclick="closeModal()"><p>Cerrar</p></span>
+                </div>
+            </div>
+         
+          
+        
+         
+
+      
+    </div>
+    </header>
+</body>
+
+</html>
